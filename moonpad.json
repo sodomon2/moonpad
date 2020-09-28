@@ -1,0 +1,20 @@
+{
+  "desing": {
+    "font": "Sans 18",
+    "height": 200,
+    "width": 200
+  },
+  "history": {
+    "recents": []
+  },
+  "notifications": {
+    "status_icon": true
+  },
+  "other": {
+    "delete_note": true
+  },
+  "view": {
+    "decorated": false,
+    "show_toolbar": true
+  }
+}
