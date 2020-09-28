@@ -11,7 +11,8 @@
     "status_icon": true
   },
   "other": {
-    "delete_note": true
+    "delete_note": true,
+    "log": true
   },
   "view": {
     "decorated": false,

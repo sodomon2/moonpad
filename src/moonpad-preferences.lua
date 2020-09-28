@@ -66,6 +66,16 @@ function ui.preferences_check_note:on_clicked()
 end
 ui.preferences_check_note:set_active(conf.other.delete_note)
 
+function ui.preferences_check_log:on_clicked()
+	if (self:get_active()) then
+		conf.other.log = true
+	else
+		conf.other.log = false
+	end
+	config:save(('%s/moonpad.json'):format(dir), conf)
+end
+ui.preferences_check_log:set_active(conf.other.log)
+
 function ui.btn_prefecences_close:on_clicked()
     window_height_width()
     ui.preferences_window:hide()
