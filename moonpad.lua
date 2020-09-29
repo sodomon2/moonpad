@@ -18,12 +18,8 @@ Gtk     = lgi.require('Gtk', '3.0')
 Gdk     = lgi.Gdk
 GLib    = lgi.GLib
 
-assert  = lgi.assert
 builder = Gtk.Builder()
-
 ui = builder.objects
-
-assert(builder:add_from_file('moonpad.ui'), 'error al cargar la plantilla')
 
 config:create_config('moonpad','moonpad.json')
 dir       = ('%s/moonpad'):format(GLib.get_user_config_dir())
@@ -32,6 +28,8 @@ log_state = conf.other.log
 
 log       = Logger("MoonPad", dir, log_state)
 log('Inciando MoonPad', 'info')
+
+log:expect(builder:add_from_file('moonpad.ui'), 'Error al cargar la gui de MoonPad')
 
 -- MoonPad
 require('src.moonpad-app')
