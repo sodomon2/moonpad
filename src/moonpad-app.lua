@@ -22,22 +22,6 @@ function ui.main_window:on_destroy()
     log('MoonPad se ha cerrado', 'info')
 end
 
-function ui.btn_delete:on_clicked()
-    if conf.other.delete_note == true then
-        log('¿Esta seguro que quiere borrar la nota?', 'warn')
-        ui.delete_dialog:run()
-        ui.delete_dialog:hide()
-    else
-        ui.delete_dialog:hide()
-        log('La nota ha sido borrada', 'info')
-    end
-end 
-
-function ui.btn_dialog_delete:on_clicked()
-    ui.delete_dialog:hide()
-    log('La nota ha sido borrada', 'info')
-end 
-
 function ui.btn_dialog_cancel:on_clicked()
     ui.delete_dialog:hide()
 end

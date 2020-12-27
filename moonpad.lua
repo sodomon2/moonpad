@@ -17,9 +17,6 @@ config  = require('libraries.configuration')
 Gtk     = lgi.require('Gtk', '3.0')
 Gdk     = lgi.Gdk
 GLib    = lgi.GLib
-Gio     = lgi.Gio
-
-app = Gtk.Application.new('org.lgi.GtkPad',Gio.ApplicationFlags.HANDLES_OPEN)
 
 builder   = Gtk.Builder()
 ui        = builder.objects
