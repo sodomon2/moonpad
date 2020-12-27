@@ -19,6 +19,26 @@ if utils:isfile(filename) then
   ui.textbuffer.text = load_pad()
 end
 
+function ui.btn_delete:on_clicked()
+    if conf.other.delete_note == true then
+        log('¿Esta seguro que quiere borrar la nota?', 'warn')
+        ui.delete_dialog:run()
+        ui.delete_dialog:hide()
+    else
+        ui.delete_dialog:hide()
+        os.execute('rm -r ' .. filename)
+        ui.textbuffer.text = ''
+        log('La nota ha sido borrada', 'info')
+    end
+end
+
+function ui.btn_dialog_delete:on_clicked()
+    os.execute('rm -r ' .. filename)
+    ui.textbuffer.text = ''
+    ui.delete_dialog:hide()
+    log('La nota ha sido borrada', 'info')
+end
+
 function save_pad()
     text = ui.textbuffer.text
     file = assert(io.open(filename,'w'), 'Error loading file : ' .. filename)
@@ -31,20 +51,4 @@ GLib.timeout_add(GLib.PRIORITY_DEFAULT, 5000,function()
     return true
 end)
 
-function ui.btn_delete:on_clicked()
-    if conf.other.delete_note == true then
-        log('¿Esta seguro que quiere borrar la nota?', 'warn')
-        ui.delete_dialog:run()
-        ui.delete_dialog:hide()
-    else
-        ui.delete_dialog:hide()
-        --ui.textbuffer:delete_selection(true,true)
-        log('La nota ha sido borrada', 'info')
-    end
-end
-
-function ui.btn_dialog_delete:on_clicked()
-    ui.delete_dialog:hide()
-    log('La nota ha sido borrada', 'info')
-end
 
