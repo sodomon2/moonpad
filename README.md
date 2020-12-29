@@ -12,6 +12,6 @@ Work In Progress Xpad Clone
 - [ ] Customizable fonts
 - [x] Log implementation
 - [x] basic functions: copy,paste and cut
-- [ ]Background coloring for the treeview
+- [ ] Background coloring for the treeview
 - [x] Status icon
 - [ ] Fixed window position
