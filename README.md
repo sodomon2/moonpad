@@ -11,7 +11,12 @@ Work In Progress Xpad Clone
 - [x] Deleting notes
 - [ ] Customizable fonts
 - [x] Log implementation
-- [x] basic functions: copy,paste and cut
+- [ ] basic functions:
+    -	 [x] copy
+    -	 [x] paste
+    -	 [x] cut
+    -	 [ ] undo
+    -    [ ] redo
 - [ ] Background coloring for the treeview
 - [x] Status icon
 - [ ] Fixed window position
