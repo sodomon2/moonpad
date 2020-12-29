@@ -1,6 +1,6 @@
 # MoonPad 
 
-Work In Progress Xpad Clone
+Work in progress xpad clone in Lua
 
 # TODO
 
@@ -11,7 +11,7 @@ Work In Progress Xpad Clone
 - [x] Deleting notes
 - [ ] Customizable fonts
 - [x] Log implementation
-- [ ] basic functions:
+- basic functions :
     -	 [x] copy
     -	 [x] paste
     -	 [x] cut
