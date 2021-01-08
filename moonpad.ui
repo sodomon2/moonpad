@@ -174,9 +174,6 @@ The Moonsteal Team</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="buffer">textbuffer</property>
-                <style>
-                  <class name="textview"/>
-                </style>
               </object>
             </child>
           </object>
@@ -355,7 +352,7 @@ The Moonsteal Team</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="btn_prefecences_close">
+              <object class="GtkButton" id="btn_preferences_close">
                 <property name="label" translatable="yes">Close</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -472,7 +469,7 @@ The Moonsteal Team</property>
                       </object>
                       <packing>
                         <property name="x">120</property>
-                        <property name="y">105</property>
+                        <property name="y">225</property>
                       </packing>
                     </child>
                     <child>
@@ -483,7 +480,7 @@ The Moonsteal Team</property>
                       </object>
                       <packing>
                         <property name="x">120</property>
-                        <property name="y">65</property>
+                        <property name="y">181</property>
                       </packing>
                     </child>
                     <child>
@@ -494,7 +491,7 @@ The Moonsteal Team</property>
                       </object>
                       <packing>
                         <property name="x">5</property>
-                        <property name="y">73</property>
+                        <property name="y">190</property>
                       </packing>
                     </child>
                     <child>
@@ -505,7 +502,65 @@ The Moonsteal Team</property>
                       </object>
                       <packing>
                         <property name="x">5</property>
-                        <property name="y">113</property>
+                        <property name="y">233</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkRadioButton">
+                        <property name="label" translatable="yes">Usar estos colores</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="active">True</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="x">5</property>
+                        <property name="y">60</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkColorButton" id="preferences_color_text">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="x">112</property>
+                        <property name="y">92</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Text</property>
+                      </object>
+                      <packing>
+                        <property name="x">47</property>
+                        <property name="y">100</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Background</property>
+                      </object>
+                      <packing>
+                        <property name="x">15</property>
+                        <property name="y">140</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkColorButton" id="preferences_color_background">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                      </object>
+                      <packing>
+                        <property name="x">112</property>
+                        <property name="y">132</property>
                       </packing>
                     </child>
                   </object>

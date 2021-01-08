@@ -6,17 +6,24 @@
  @date      23.09.2020 18:37:43 -04
 ]]
 
+style_template = [[
+text {
+  background: %s;
+}
+]]
+
 display = ui.main_window:get_display()
 clipboard = Gtk.Clipboard.get_for_display(display, Gdk.SELECTION_CLIPBOARD)
 
 provider = Gtk.CssProvider()
-provider:load_from_path('src/moonpad.css')
+provider:load_from_data(string.format(style_template, tostring(conf.desing.background)))
 screen = Gdk.Display.get_default_screen(Gdk.Display:get_default())
 GTK_STYLE_PROVIDER_PRIORITY_APPLICATION = 600
 Gtk.StyleContext.add_provider_for_screen(
     screen, provider,
     GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
 )
+
 function ui.main_window:on_destroy()
     Gtk.main_quit()
     log('MoonPad se ha cerrado', 'info')

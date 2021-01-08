@@ -76,8 +76,9 @@ function ui.preferences_check_log:on_clicked()
 end
 ui.preferences_check_log:set_active(conf.other.log)
 
-function ui.btn_prefecences_close:on_clicked()
+function ui.btn_preferences_close:on_clicked()
     window_height_width()
     ui.preferences_window:hide()
     config:save(('%s/moonpad.json'):format(dir), conf)
 end
+

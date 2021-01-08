@@ -1,6 +1,7 @@
 {
   "desing": {
     "font": "Sans 18",
+    "background": "blue",
     "height": 200,
     "width": 200
   },
